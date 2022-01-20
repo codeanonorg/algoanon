@@ -1,0 +1,20 @@
+{
+    "solution": [
+        {
+            "day": "31/01/2022",
+            "assigned_volunteers": ["marc", "jean", "francois"]
+        },
+        {
+            "day": "04/02/2022",
+            "assigned_volunteers": []
+        },
+        {
+            "day": "07/02/2022",
+            "assigned_volunteers": []
+        },
+        {
+            "day": "11/02/2022",
+            "assigned_volunteers": []
+        }
+    ]
+}
