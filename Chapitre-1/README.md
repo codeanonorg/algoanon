@@ -13,6 +13,11 @@ Sachant que plusieures contraintes sont imposées pour éviter de surcharger les
 2. Un bénévole ne peut enchaîner 2 permanences de suite 
 3. Il faut obligatoirement 3 bénévoles pour que le local puisse être ouvert
 
+## Objectif
+
+Proposez un algorithme qui génère un planning pour faciliter la tâche du responsabe du planning, sachant que l'**on souhaite ouvrir le plus de jour possible** et **répartir équitablement les bénévoles** sur le mois pour que tout le monde participe.
+
+
 ## Données d'entrée
 
 ```json
