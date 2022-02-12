@@ -6,7 +6,7 @@ Ce problème est proposé dans le cadre des ateliers organisés par l'associatio
 
 Pour que le local de l'association puisse être ouvert, il faut qu'un certain nombre de bénévoles se rendent disponible sur des créneaux au fil des semaines.
 
-Partant d'une liste de jours et de bénévoles avec leur disponibilités, il faut que le responsable du planning les répartisse équitablement sur le mois à venir pour garantir l'ouverture du local.
+Partant d'une liste de jours et de bénévoles avec leurs disponibilités, il faut que le responsable du planning les répartisse équitablement sur le mois à venir pour garantir l'ouverture du local.
 
 Sachant que plusieures contraintes sont imposées pour éviter de surcharger les bénévoles:
 1. Un bénévole ne peut effectuer plus de 3 permanences par mois
@@ -15,7 +15,7 @@ Sachant que plusieures contraintes sont imposées pour éviter de surcharger les
 
 ## Objectif
 
-Proposez un algorithme qui génère un planning pour faciliter la tâche du responsabe du planning, sachant que l'**on souhaite ouvrir le plus de jour possible** et **répartir équitablement les bénévoles** sur le mois pour que tout le monde participe.
+Proposez un algorithme qui génère une affectation pour faciliter la tâche du responsabe du planning, sachant que l'**on souhaite ouvrir le plus de jour possible** et **répartir équitablement les bénévoles** sur le mois pour que tout le monde participe.
 
 
 ## Données d'entrée
@@ -77,6 +77,10 @@ Si aucun bénévoles n'est disponible pour un certain jour, il faut tout de mêm
             "day": "11/02/2022",
             "assigned_volunteers": ["Marc", "Arthur", "Lison"]
         },
+        {
+            "day": "14/02/2022",
+            "assigned_volunteers": []
+        },
         ...
     ]
 }
@@ -89,3 +93,6 @@ Si aucun bénévoles n'est disponible pour un certain jour, il faut tout de mêm
 - Ayant le planning du mois courant, suis-je capable de créer le planning du mois suivant tout en respectant les contraintes initiales? 
 
 - L'algorithme proposé fonctionne t-il si le nombre de permanences maximales autorisées par mois ainsi que le nombre de bénévoles nécéssaire à l'ouverture du local est modifié?
+
+- Certains jours doivent ouvrir en priorité par rapport à d'autres, comment gérer ce genre de situation ? 
+
