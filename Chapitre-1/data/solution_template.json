@@ -6,14 +6,40 @@
         },
         {
             "day": "04/02/2022",
-            "assigned_volunteers": []
+            "assigned_volunteers": ["marc"]
         },
         {
             "day": "07/02/2022",
-            "assigned_volunteers": []
+            "assigned_volunteers": ["fredo"]
         },
         {
             "day": "11/02/2022",
+            "assigned_volunteers": ["marc"]
+        },
+        {
+            "day": "14/02/2022",
+            "assigned_volunteers": ["marc"]
+        },
+        {
+            "day": "18/02/2022",
+            "assigned_volunteers": []
+        },
+        {
+            "day": "21/02/2022",
+            "assigned_volunteers": []
+        },
+        {
+            "day": "25/02/2022",
+            "assigned_volunteers": []
+
+        },
+        {
+            "day": "28/02/2022",
+            "assigned_volunteers": []
+ 
+        },
+        {
+            "day": "04/03/2022",
             "assigned_volunteers": []
         }
     ]

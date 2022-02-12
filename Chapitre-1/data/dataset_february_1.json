@@ -26,15 +26,15 @@
         },
         {
             "name": "Gertrude",
-            "days_unavailable": ["31/01/2022", "04/02/2022", "11/02/2022"]
+            "days_unavailable": ["31/01/2022", "04/02/2022", "07/02/2022", "21/02/2022", "28/02/2022"]
         },
         {
             "name": "Marc",
-            "days_unavailable": ["31/01/2022", "04/02/2022", "11/02/2022"]
+            "days_unavailable": ["04/02/2022", "11/02/2022", "18/02/2022", "25/02/2022", "04/03/2022"]
         },
         {
             "name": "Eude",
-            "days_unavailable": ["31/01/2022", "04/02/2022", "11/02/2022"]
+            "days_unavailable": ["28/02/2022", "04/03/2022"]
         },
         {
             "name": "Alain",
@@ -42,7 +42,31 @@
         },
         {
             "name": "Francine",
-            "days_unavailable": ["31/01/2022", "04/02/2022", "11/02/2022"]
+            "days_unavailable": ["18/02/2022"]
+        },
+        {
+            "name": "Charlotte",
+            "days_unavailable": []
+        },
+        {
+            "name": "Maria",
+            "days_unavailable": []
+        },
+        {
+            "name": "Aude",
+            "days_unavailable": []
+        },
+        {
+            "name": "Antoine",
+            "days_unavailable": []
+        },
+        {
+            "name": "Icham",
+            "days_unavailable": []
+        },
+        {
+            "name": "Lou",
+            "days_unavailable": []
         }
     ]
 }
