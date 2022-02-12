@@ -57,8 +57,9 @@ def validate_solution(solution_file: str, reference_dateset: str, max_assignemen
     reference_days = reference_data['days']
 
     validate_solution_file_format(solution_file=solution_file, n_days=len(reference_days))
-    # TODO: assert that dict is in order (with substring lambda stuff)
-
+    # sort dict values: 31/01/2022 to 20220131
+    data['solution'].sort(key=(lambda d: d['day'].split('/')[2] + d['day'].split('/')[1] + d['day'].split('/')[0]))
+    
     # get all volunteers
     volunteer_dict = defaultdict(int)
     for day in data['solution']:
