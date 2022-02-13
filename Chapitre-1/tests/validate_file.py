@@ -60,6 +60,7 @@ def validate_solution(solution_file: str, reference_dateset: str, max_assignemen
     data_days = []
     reference_data = open_file(reference_dateset)
     reference_days = reference_data['days']
+    reference_volunteers = {o['name']:o['days_unavailable'] for o in reference_data['volunteers']}
 
     validate_solution_file_format(solution_file=solution_file, n_days=len(reference_days))
     # sort dict values: 31/01/2022 to 20220131
@@ -70,27 +71,50 @@ def validate_solution(solution_file: str, reference_dateset: str, max_assignemen
     for day in data['solution']:
         data_days.append(day['day'])
 
+        # Vérifie que le nombre de bénévoles correspond à la contrainte de base
+        # TODO: add field in dataset file
+        check_cond(
+            len(day['assigned_volunteers']) == 0 or len(day['assigned_volunteers']) == 3,
+            f"Le nombre de bénévoles nécessaire au bon fonctionnement de la cafétéria n'est pas respecté au jour {day['day']}."+
+            f"\n    La solution n'est pas valide"
+        )
         for volunteer in day['assigned_volunteers']:
+            # check that volunteer does exist in dataset
+            check_cond(
+                volunteer in reference_volunteers.keys(),
+                f"Le bénévole '{volunteer}' n\'apparait pas dans le dateset et ne peut donc être assigné."+
+                f"\n    La solution n'est pas valide"
+            )
+            # count number of assigned days per volunteer
             volunteer_dict[volunteer] += 1
+            check_cond(
+                volunteer_dict[volunteer] <= max_assignement_per_month,
+                f'Le bénévole "{volunteer}" travaille trop!\n    La solution proposée n\'est pas valide.'
+            )
+            # vérifier que les assignations correspondent au contraintes des bénévoles
+            check_cond(
+                day['day'] not in reference_volunteers[volunteer],
+                f"Le volontaire {volunteer} ne souhaite pas travailler le {day['day']}.\n"+
+                f"  La solution n'est pas valide"
+            )
+
     # check if all days are present
     for ref_day in reference_days:
         check_cond(
             ref_day in data_days,
             f"Le jour {ref_day} n'apparait pas dans le fichier solution."
         )
-    # - count day assignement per volunteer
-    for v in volunteer_dict:
-        check_cond(
-            volunteer_dict[v] > max_assignement_per_month,
-            f'Le bénévole "{v}" travaille trop!\n    La solution proposée n\'est pas valide.'
-        )
-    # - check that no consecutive day
+    # check that there are no consecutive day of work for a volunteer
     for i, day in enumerate(data['solution'][:-1]):
         for v in day['assigned_volunteers']:
             check_cond(
-               v in data['solution'][i + 1]['assigned_volunteers'],
+               v not in data['solution'][i + 1]['assigned_volunteers'],
                 f"Le bénévole \"{v}\" ne peut pas être assigner à 2 jours consécutifs ({day['day']} et {data['solution'][i + 1]['day']})\n    La solution proposée n\'est pas valide."
             )
+    # TODO: vérifier pas plusieures assignation d'un même bénévole à 1 jour
+    #   Remove duplicate?
+    print(f'Le fichier solution est valide')
+    exit(0)
 
 
 if __name__ == '__main__':
