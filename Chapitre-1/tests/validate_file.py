@@ -40,6 +40,11 @@ def validate_solution_file_format(solution_file: str, n_days: int = 4) -> int:
             f"Une valeur associé à la clé 'day' ne correspond au type attendu.\n" +
             f"    format attendu '01/01/2001', de type string")
         check_cond(
+            len(e['day']) == 10 and (e['day'][2] == e['day'][5] == '/'),
+            f"Le fomat de la date ne correspond pas.\n" +
+            f"  format attendu '01/01/2001', de type string."
+        )
+        check_cond(
             type(e['assigned_volunteers']) == list,
             f"Une valeur associé à la clé 'assigned_volunteers' ne correspond au type attendu.\n" +
             f"    format attendu: ['s1', 's2'], de type liste de string")
