@@ -28,11 +28,11 @@ def validate_solution_file_format(solution_file: str, n_days: int = 4) -> int:
         'Le format du fichier ne correspond pas à ce qui est attendu')
 
     check_cond(
-        len(list(data.values())[0]) == n_days,
+        len(data['solution']) == n_days,
         f"Erreur, le nombre de jour dans la solution ne correspond pas au nombre de jours attendues\n" +
         f"    N'oubliez pas les jours sans bénévoles dans votre solutions")
-    
-    for e in list(data.values())[0]:
+
+    for e in data['solution']:
         check_cond('day' in e.keys(), "La clé 'day' n'apparait pas dans la solution")
         check_cond('assigned_volunteers' in e.keys(), "La clé 'assigned_volunteers' n'apparait pas dans la solution")
         check_cond(
