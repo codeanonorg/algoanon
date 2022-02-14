@@ -20,7 +20,7 @@ def open_file(filename: str):
     return data
 
 
-def validate_solution_file_format(solution_file: str, n_days: int = 4) -> int: 
+def validate_solution_file_format(solution_file: str, n_days: int) -> int: 
     data = open_file(solution_file)
 
     check_cond(
@@ -55,26 +55,31 @@ def validate_solution_file_format(solution_file: str, n_days: int = 4) -> int:
     return 0
 
 
-def validate_solution(solution_file: str, reference_dateset: str, max_assignement_per_month: int = 3):
+def validate_solution(solution_file: str, reference_dateset: str):
     data = open_file(solution_file)
     data_days = []
     reference_data = open_file(reference_dateset)
     reference_days = reference_data['days']
     reference_volunteers = {o['name']:o['days_unavailable'] for o in reference_data['volunteers']}
+    max_shifts_per_month = reference_data['max_shifts_per_month']
+    volunteers_per_shift = reference_data['volunteers_per_shift']
 
     validate_solution_file_format(solution_file=solution_file, n_days=len(reference_days))
     # sort dict values: 31/01/2022 to 20220131
     data['solution'].sort(key=(lambda d: d['day'].split('/')[2] + d['day'].split('/')[1] + d['day'].split('/')[0]))
     
+    # Treat the list of volunteers as sets, removing duplicate
+    m_unique = lambda l: list(set(l))
+
     # get all volunteers
     volunteer_dict = defaultdict(int)
     for day in data['solution']:
         data_days.append(day['day'])
 
         # Vérifie que le nombre de bénévoles correspond à la contrainte de base
-        # TODO: add field in dataset file
         check_cond(
-            len(day['assigned_volunteers']) == 0 or len(day['assigned_volunteers']) == 3,
+                len(m_unique(day['assigned_volunteers'])) == 0 
+            or  len(m_unique(day['assigned_volunteers'])) == volunteers_per_shift,
             f"Le nombre de bénévoles nécessaire au bon fonctionnement de la cafétéria n'est pas respecté au jour {day['day']}."+
             f"\n    La solution n'est pas valide"
         )
@@ -88,7 +93,7 @@ def validate_solution(solution_file: str, reference_dateset: str, max_assignemen
             # count number of assigned days per volunteer
             volunteer_dict[volunteer] += 1
             check_cond(
-                volunteer_dict[volunteer] <= max_assignement_per_month,
+                volunteer_dict[volunteer] <= max_shifts_per_month,
                 f'Le bénévole "{volunteer}" travaille trop!\n    La solution proposée n\'est pas valide.'
             )
             # vérifier que les assignations correspondent au contraintes des bénévoles
@@ -111,8 +116,7 @@ def validate_solution(solution_file: str, reference_dateset: str, max_assignemen
                v not in data['solution'][i + 1]['assigned_volunteers'],
                 f"Le bénévole \"{v}\" ne peut pas être assigner à 2 jours consécutifs ({day['day']} et {data['solution'][i + 1]['day']})\n    La solution proposée n\'est pas valide."
             )
-    # TODO: vérifier pas plusieures assignation d'un même bénévole à 1 jour
-    #   Remove duplicate?
+
     print(f'Le fichier solution est valide')
     exit(0)
 
@@ -122,6 +126,6 @@ if __name__ == '__main__':
     cli.add_argument('solution_file', help='Fichier au format json contenant la solution', type=str)
     cli.add_argument('dataset_file', help='Fichier au format json contenant le dataset utilisé', type=str)
     args = cli.parse_args()
-    # p tests/validate_file.py 'data/solution_template.json' 'data/dataset_february_1.json'
+
     validate_solution(args.solution_file, args.dataset_file)
         
