@@ -1,0 +1,148 @@
+{
+    "max_shifts_per_month": 3,
+    "volunteers_per_shift": 3,
+    "days": [
+        "31/01/2022",
+        "01/02/2022",
+        "02/02/2022",
+        "04/02/2022",
+        "07/02/2022",
+        "08/02/2022",
+        "09/02/2022",
+        "11/02/2022",
+        "14/02/2022",
+        "15/02/2022",
+        "16/02/2022",
+        "18/02/2022",
+        "21/02/2022",
+        "22/02/2022",
+        "23/02/2022",
+        "25/02/2022",
+        "28/02/2022",
+        "01/03/2022",
+        "02/03/2022",
+        "04/03/2022"
+    ],
+    "volunteers": [
+        {
+            "name": "Arthur",
+            "days_unavailable": []
+        },
+        {
+            "name": "Nathan",
+            "days_unavailable": []
+        },
+        {
+            "name": "Lison",
+            "days_unavailable": []
+        },
+        {
+            "name": "Gertrude",
+            "days_unavailable": []
+        },
+        {
+            "name": "Marc",
+            "days_unavailable": []
+        },
+        {
+            "name": "Eude",
+            "days_unavailable": []
+        },
+        {
+            "name": "Alain",
+            "days_unavailable": []
+        },
+        {
+            "name": "Francine",
+            "days_unavailable": []
+        },
+        {
+            "name": "Charlotte",
+            "days_unavailable": []
+        },
+        {
+            "name": "Maria",
+            "days_unavailable": []
+        },
+        {
+            "name": "Aude",
+            "days_unavailable": []
+        },
+        {
+            "name": "Antoine",
+            "days_unavailable": []
+        },
+        {
+            "name": "Icham",
+            "days_unavailable": []
+        },
+        {
+            "name": "Lou",
+            "days_unavailable": []
+        },
+        {
+            "name": "Zac",
+            "days_unavailable": []
+        },
+        {
+            "name": "Franck",
+            "days_unavailable": []
+        },
+        {
+            "name": "Marie",
+            "days_unavailable": []
+        },
+        {
+            "name": "Anna",
+            "days_unavailable": []
+        },
+        {
+            "name": "Jean",
+            "days_unavailable": []
+        },
+        {
+            "name": "Elia",
+            "days_unavailable": []
+        },
+        {
+            "name": "Kira",
+            "days_unavailable": []
+        },
+        {
+            "name": "Maya",
+            "days_unavailable": []
+        },
+        {
+            "name": "Manel",
+            "days_unavailable": []
+        },
+        {
+            "name": "Noah",
+            "days_unavailable": []
+        },
+        {
+            "name": "Nate",
+            "days_unavailable": []
+        },
+        {
+            "name": "Natalie",
+            "days_unavailable": []
+        },
+        {
+            "name": "Zendaya",
+            "days_unavailable": []
+        },
+        {
+            "name": "Romie",
+            "days_unavailable": []
+        },
+        {
+            "name": "Marco",
+            "days_unavailable": []
+        },
+        {
+            "name": "Randa",
+            "days_unavailable": []
+        }
+    ]
+}
