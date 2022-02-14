@@ -9,9 +9,9 @@ Pour que le local de l'association puisse être ouvert, il faut qu'un certain no
 Partant d'une liste de jours et de bénévoles avec leurs disponibilités, il faut que le responsable du planning les répartisse équitablement sur le mois à venir pour garantir l'ouverture du local.
 
 Sachant que plusieures contraintes sont imposées pour éviter de surcharger les bénévoles:
-1. Un bénévole ne peut effectuer plus de 3 permanences par mois
+1. Un bénévole ne peut effectuer plus de 3 permanences par mois (`max_shifts_per_month`)
 2. Un bénévole ne peut enchaîner 2 permanences de suite 
-3. Il faut obligatoirement 3 bénévoles pour que le local puisse être ouvert
+3. Il faut obligatoirement 3 bénévoles pour que le local puisse être ouvert (`volunteers_per_shift`)
 
 ## Objectif
 
@@ -20,9 +20,11 @@ Proposez un algorithme qui génère une affectation pour faciliter la tâche du 
 
 ## Données d'entrée
 
+- **data_february.json**
 ```json
-// data_february.json
 {
+    "max_shifts_per_month": 3,
+    "volunteers_per_shift": 3,
     "days": [
         "31/01/2022",
         "04/02/2022",
@@ -56,9 +58,9 @@ Proposez un algorithme qui génère une affectation pour faciliter la tâche du 
 
 ### Format de la solution attendu
 Si aucun bénévoles n'est disponible pour un certain jour, il faut tout de même ajouter ce jour à la solution avec comme valeur une liste vide.
-```json
 
-// solution.json
+- **solution.json**
+```json
 {
     "solution": [
         {
@@ -96,3 +98,18 @@ Si aucun bénévoles n'est disponible pour un certain jour, il faut tout de mêm
 
 - Certains jours doivent ouvrir en priorité par rapport à d'autres, comment gérer ce genre de situation ? 
 
+
+
+## Script de validation d'une solution
+
+Pour vérifier qu'une solution respecte le format défini ci-dessus et les contraintes de planification, un script python est mis à disposition.
+
+```bash
+$ python tests/validate_file.py fichier_json_solution.json dataset_de_reference.json
+```
+Le programme renvoie `0` si tout est correct et `1` si une erreur est détectée. Un message précisant le type d'erreur s'affiche également.
+
+Pour vérifier la sortie du script:
+```
+$ echo $?
+```
