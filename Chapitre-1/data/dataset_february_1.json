@@ -60,11 +60,11 @@
         },
         {
             "name": "Antoine",
-            "days_unavailable": []
+            "days_unavailable": ["25/02/2022", "28/02/2022"]
         },
         {
             "name": "Icham",
-            "days_unavailable": []
+            "days_unavailable": ["25/02/2022", "04/03/2022"]
         },
         {
             "name": "Lou",
