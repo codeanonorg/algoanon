@@ -16,35 +16,59 @@
     "volunteers" : [
         {
             "name": "Arthur",
-            "days_unavailable": []
+            "days_unavailable": ["25/02/2022", "04/03/2022"]
         },
         {
             "name": "Nathan",
-            "days_unavailable": []
+            "days_unavailable": ["25/02/2022"]
         },
         {
             "name": "Lison",
-            "days_unavailable": ["31/01/2022", "04/02/2022", "11/02/2022"]
+            "days_unavailable": ["31/01/2022", "04/02/2022", "11/02/2022", "25/02/2022"]
         },
         {
             "name": "Gertrude",
-            "days_unavailable": ["31/01/2022", "04/02/2022", "11/02/2022"]
+            "days_unavailable": ["31/01/2022", "04/02/2022", "11/02/2022", "25/02/2022"]
         },
         {
             "name": "Marc",
-            "days_unavailable": ["31/01/2022", "04/02/2022", "11/02/2022"]
+            "days_unavailable": ["31/01/2022", "04/02/2022", "11/02/2022", "25/02/2022"]
         },
         {
             "name": "Eude",
-            "days_unavailable": ["31/01/2022", "04/02/2022", "11/02/2022"]
+            "days_unavailable": ["31/01/2022", "04/02/2022", "11/02/2022", "25/02/2022"]
         },
         {
             "name": "Alain",
-            "days_unavailable": ["31/01/2022", "04/02/2022", "11/02/2022"]
+            "days_unavailable": ["31/01/2022", "04/02/2022", "11/02/2022", "25/02/2022"]
         },
         {
             "name": "Francine",
-            "days_unavailable": ["31/01/2022", "04/02/2022", "11/02/2022"]
+            "days_unavailable": ["18/02/2022", "25/02/2022"]
+        },
+        {
+            "name": "Charlotte",
+            "days_unavailable": ["25/02/2022"]
+        },
+        {
+            "name": "Maria",
+            "days_unavailable": ["25/02/2022"]
+        },
+        {
+            "name": "Aude",
+            "days_unavailable": ["25/02/2022"]
+        },
+        {
+            "name": "Antoine",
+            "days_unavailable": ["25/02/2022", "28/02/2022"]
+        },
+        {
+            "name": "Icham",
+            "days_unavailable": ["25/02/2022", "04/03/2022"]
+        },
+        {
+            "name": "Lou",
+            "days_unavailable": ["25/02/2022", "04/03/2022"]
         }
     ]
 }
