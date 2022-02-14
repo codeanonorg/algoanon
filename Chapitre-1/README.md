@@ -83,7 +83,6 @@ Si aucun bénévoles n'est disponible pour un certain jour, il faut tout de mêm
             "day": "14/02/2022",
             "assigned_volunteers": []
         },
-        ...
     ]
 }
 ```
