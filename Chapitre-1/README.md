@@ -2,6 +2,14 @@
 
 Ce problème est proposé dans le cadre des ateliers organisés par l'association étudiante [CodeAnon](https://codeanon.org).
 
+## Comment participer
+
+Pour participer, il suffit de fournir une solution dans n'importe quel langage sur un dépôt git public.
+
+Les différentes entrées seront évalué une fois la date limite dépassé.
+
+Si votre fichier solution n'est pas dans un format valide ([voir script de validation](#script-de-validation-dune-solution)), vous serez immédiatement disqualifié.
+
 ## Problème
 
 Pour que le local de l'association puisse être ouvert, il faut qu'un certain nombre de bénévoles se rendent disponible sur des créneaux au fil des semaines.
