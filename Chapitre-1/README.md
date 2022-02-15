@@ -26,6 +26,7 @@ Sachant que plusieures contraintes sont imposées pour éviter de surcharger les
 
 Proposez un algorithme qui génère une affectation pour faciliter la tâche du responsabe du planning, sachant que l'**on souhaite ouvrir le plus de jour possible** et **répartir équitablement les bénévoles** sur le mois pour que tout le monde participe.
 
+**C'est un problème difficile**, il est donc conseillé d'abord de trouver une solution valide puis de s'essayer à l'optimisation des critères ci-dessus.
 
 ## Données d'entrée
 
