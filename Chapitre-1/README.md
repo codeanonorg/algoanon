@@ -122,8 +122,3 @@ Pour vérifier la sortie du script:
 $ echo $?
 ```
 
-## Extra
-- empty all list in dataset file 
-```bash
-sed -i 's/"days_unavailable": \[.*\]/"days_unavailable": \[\]/g' data/dataset_february_3.json
-```
