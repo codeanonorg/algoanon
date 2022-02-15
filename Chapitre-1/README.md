@@ -22,7 +22,15 @@ Sachant que plusieures contraintes sont imposées pour éviter de surcharger les
 2. Un bénévole ne peut enchaîner 2 permanences de suite 
 3. Il faut obligatoirement 3 bénévoles pour que le local puisse être ouvert (`volunteers_per_shift`)
 
-## Objectif
+## Objectifs
+
+### Objectif 1
+
+Proposez un algorithme qui génère une affectation.
+
+> **Note:** L'afectation vide étant valide, l'objectif est donc d'ouvrir le plus de jour possible.
+> 
+> Votre tâche est donc de trouver une solution qui garantit le plus de jours d'ouverture.
 
 Proposez un algorithme qui génère une affectation pour faciliter la tâche du responsabe du planning, sachant que l'**on souhaite ouvrir le plus de jour possible** et **répartir équitablement les bénévoles** sur le mois pour que tout le monde participe.
 
