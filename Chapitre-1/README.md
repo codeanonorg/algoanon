@@ -41,10 +41,10 @@ Pour corser le problème, on demande de **répartir équitablement les bénévol
 
 #### Fonction d'évalution
 
-On cherche une solution $S$ de répartition des bénévoles qui minimise la fonction d'évaluation suivante:
+On cherche une solution <img src="https://render.githubusercontent.com/render/math?math=S"> de répartition des bénévoles qui minimise la fonction d'évaluation suivante:
 
 1. On ordonne deux solutions par jours de fermeture, la solution qui possède le moins de jour de fermeture est forcément meilleure.
-2. Pour évaluer le second critère, on cherche à minimiser la fonction suivante: $\sum_{b\in B}n\_affectation_b^2$ avec $B$ l'ensemble des bénévoles.
+2. Pour évaluer le second critère, on cherche à minimiser la fonction suivante: <img src="https://render.githubusercontent.com/render/math?math=\sum_{b\in B}n\_affectation_b^2">$ avec $B$ l'ensemble des bénévoles.
 
 
 > - Une solution est une fonction qui associe un jour à un ensemble de bénévole.
