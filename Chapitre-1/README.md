@@ -32,7 +32,11 @@ Proposez un algorithme qui génère une affectation.
 > 
 > Votre tâche est donc de trouver une solution qui garantit le plus de jours d'ouverture.
 
-Proposez un algorithme qui génère une affectation pour faciliter la tâche du responsabe du planning, sachant que l'**on souhaite ouvrir le plus de jour possible** et **répartir équitablement les bénévoles** sur le mois pour que tout le monde participe.
+
+### Objectif 2
+
+Pour corser le problème, on demande de **répartir équitablement les bénévoles** sur le mois pour que tout les bénévoles participe, tout en **ouvrant le plus de jour possibles**.
+
 
 > ⚠️ **C'est un problème difficile**, il est donc conseillé d'abord de trouver une solution valide puis de s'essayer à l'optimisation des critères ci-dessus.
 
