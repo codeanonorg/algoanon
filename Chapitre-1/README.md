@@ -35,7 +35,7 @@ Proposez un algorithme qui génère une affectation.
 
 ### Objectif 2
 
-> ⚠️ C'est un problème difficile, il est donc d'abord conseillé de trouver une solution valide puis de s'essayer à l'optimisation des critères ci-dessous.
+> ⚠️ C'est un problème difficile, il est donc d'abord conseillé de trouver une solution valide avant de s'essayer à l'optimisation des critères ci-dessous.
 
 Pour corser le problème, on demande de **répartir équitablement les bénévoles** sur le mois pour que tout les bénévoles participe, tout en **ouvrant le plus de jour possibles**.
 
