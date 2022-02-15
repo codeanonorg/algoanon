@@ -2,13 +2,14 @@
 
 Ce problème est proposé dans le cadre des ateliers organisés par l'association étudiante [CodeAnon](https://codeanon.org).
 
+![Bagnère pub](img/algoanon_chap_I.png)
 ## Comment participer
 
-Pour participer, il suffit de fournir une solution dans n'importe quel langage sur un dépôt git public.
+Pour participer, il suffit de fournir une solution dans n'importe quel langage, sur un dépôt git public et d'ouvrir une issue **avant la deadline** sur ce dépôt. L'issue doit contenir un lien vers la solution proposée, une courte  explication de ce qui a été fait et toutes autres informations utiles.
 
 Les différentes entrées seront évalué une fois la date limite dépassé.
 
-Si votre fichier solution n'est pas dans un format valide ([voir script de validation](#script-de-validation-dune-solution)), vous serez immédiatement disqualifié.
+Si vos fichier solution ne sont pas dans un format valide ([voir script de validation](#script-de-validation-dune-solution)), vous serez immédiatement disqualifié.
 
 ## Problème
 
@@ -119,4 +120,10 @@ Le programme renvoie `0` si tout est correct et `1` si une erreur est détectée
 Pour vérifier la sortie du script:
 ```
 $ echo $?
+```
+
+## Extra
+- empty all list in dataset file 
+```bash
+sed -i 's/"days_unavailable": \[.*\]/"days_unavailable": \[\]/g' data/dataset_february_3.json
 ```
