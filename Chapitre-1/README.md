@@ -48,7 +48,6 @@ On cherche une solution <img src="https://render.githubusercontent.com/render/ma
 
 
 > - Une solution est une fonction qui associe un jour à un ensemble de bénévole.
->
 > <img src="https://render.githubusercontent.com/render/math?math=S: Jour ->">*Bénévoles*.
 >
 > - avec <img src="https://render.githubusercontent.com/render/math?math=Jour"> l'ensemble des jours du mois: "31/01/2022"<img src="https://render.githubusercontent.com/render/math?math=\in Jour">
