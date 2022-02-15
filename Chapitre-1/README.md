@@ -37,8 +37,21 @@ Proposez un algorithme qui génère une affectation.
 
 Pour corser le problème, on demande de **répartir équitablement les bénévoles** sur le mois pour que tout les bénévoles participe, tout en **ouvrant le plus de jour possibles**.
 
+#### Fonction d'évalution
 
-> ⚠️ **C'est un problème difficile**, il est donc conseillé d'abord de trouver une solution valide puis de s'essayer à l'optimisation des critères ci-dessus.
+On cherche une solution $S$ de répartition des bénévoles qui minimise la fonction d'évaluation suivante:
+
+1. On ordonne deux solutions par jours de fermeture, la solution qui possède le moins de jour de fermeture est forcément meilleure.
+2. Pour évaluer le second critère, on cherche à minimiser la fonction suivante: $\sum_{b\in B}n\_affectation_b^2$ avec $B$ l'ensemble des bénévoles.
+
+
+> - Une solution est une fonction qui associe un jour à un ensemble de bénévole.
+>
+> $$S: Jour -> Bénévoles$$
+>
+> - avec $Jour$ l'ensemble des jours du mois: "31/01/2022"$\in Jour$ 
+>
+> - $Bénévoles$ l'ensemble des bénévoles affecté à le permanence de ce jour.
 
 ## Données d'entrée
 
